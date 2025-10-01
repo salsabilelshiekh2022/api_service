@@ -1,0 +1,60 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "El-mohtaref Development (debug mode)", 
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_development.dart",
+      "flutterMode": "debug",
+      "args": [
+        "--flavor",
+        "development",
+        "--target",
+        "lib/main_development.dart",
+        "--dart-define=FLAVOR=development"
+      ]
+    },
+    {
+      "name": "El-mohtaref Development (release mode)", 
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_development.dart",
+      "flutterMode": "release",
+      "args": [
+        "--flavor",
+        "development",
+        "--target",
+        "lib/main_development.dart",
+        "--dart-define=FLAVOR=development"
+      ]
+    },
+    {
+      "name": "El-mohtaref Development (profile mode)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_development.dart",
+      "flutterMode": "profile",
+      "args": [
+        "--flavor",
+        "development",
+        "--target",
+        "lib/main_development.dart",
+        "--dart-define=FLAVOR=development"
+      ]
+    },
+    {
+      "name": "El-mohtaref Production",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_production.dart",
+      "args": [
+        "--flavor",
+        "production",
+        "--target",
+        "lib/main_production.dart",
+        "--dart-define=FLAVOR=production"
+      ]
+    }
+  ]
+}

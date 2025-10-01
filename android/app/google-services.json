@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "128424154168",
+    "project_id": "el-mohtaref-2be8e",
+    "storage_bucket": "el-mohtaref-2be8e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:128424154168:android:2ed2a2af5f22e65db502cd",
+        "android_client_info": {
+          "package_name": "com.example.elmohtaref"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmojlu0O9U00Q7xPYN9mx_HYR-V-86OxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

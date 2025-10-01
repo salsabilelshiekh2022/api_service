@@ -1,0 +1,20 @@
+default_platform(:android)
+
+platform :android do
+  desc "Lane for firebase app distribution"
+  lane :firebase_distribution do
+    sh "flutter clean"
+    sh "flutter pub get"
+    sh "flutter build apk --release --flavor development --target lib/main_development.dart --no-tree-shake-icons"
+    firebase_app_distribution(
+    app: "1:128424154168:android:2ed2a2af5f22e65db502cd",
+    firebase_cli_token:"1//03jb4TjeJNDX1CgYIARAAGAMSNwF-L9Irjr7OalH5qNfM5yzoQU3VPYzk8rTqvZzeDmT4y-pRF6hFSn35fXKs0xcocgoGnb8j04k",
+    android_artifact_type: "APK",
+    android_artifact_path: "build/app/outputs/flutter-apk/app-development-release.apk",
+    groups: "testers",
+    release_notes: "This is a new release of the Hawa delivery app. Please test it and provide feedback.",
+  )
+  end
+
+ 
+end
