@@ -19,7 +19,7 @@ import '../../features/notification/data/repos/notifications_repo_impl.dart';
 import '../../features/service_details/data/repos/service_details_repo_impl.dart';
 import '../../features/support/data/repos/tech_support_repo_impl.dart';
 import '../database/cache/cache_services.dart';
-import '../database/network/app_consumer.dart';
+import '../database/network/api_consumer.dart';
 import '../database/network/dio_consumer.dart';
 
 final getIt = GetIt.instance;

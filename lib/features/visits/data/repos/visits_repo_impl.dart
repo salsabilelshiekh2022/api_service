@@ -1,8 +1,5 @@
-import 'dart:io';
-
 import 'package:dartz/dartz.dart';
-import 'package:dio/dio.dart';
-import 'package:elmohtaref/core/database/network/app_consumer.dart';
+import 'package:elmohtaref/core/database/network/api_consumer.dart';
 import 'package:elmohtaref/core/database/network/failure.dart';
 import 'package:elmohtaref/features/visits/data/models/visit_model.dart';
 import 'package:elmohtaref/features/visits/data/repos/visits_repo.dart';
@@ -22,8 +19,8 @@ class VisitsRepoImpl implements VisitsRepo {
       String? toDate,
       int? carTypeId,
       VisitEnumStatus? status}) async {
-    try {
-      final result = await _apiConsumer.get(
+    return _apiConsumer.handleRequest(
+      request: () => _apiConsumer.get(
         EndPoints.visits,
         queryParameters: {
           'page': page,
@@ -34,34 +31,26 @@ class VisitsRepoImpl implements VisitsRepo {
           'car_type_id': carTypeId,
           'status': status?.name,
         },
-      );
-      final Map<String, dynamic> jsonData = result.data as Map<String, dynamic>;
-      return Right(VisitsResponse.fromJson(jsonData));
-    } on SocketException catch (e) {
-      return Left(ServerFailure(message: e.message));
-    } on DioException catch (e) {
-      return Left(ServerFailure.fromDioError(e));
-    } catch (e) {
-      return Left(ServerFailure(message: e.toString()));
-    }
+      ),
+      onSuccess: (result) {
+        final Map<String, dynamic> jsonData =
+            result.data as Map<String, dynamic>;
+        return VisitsResponse.fromJson(jsonData);
+      },
+    );
+    // }
   }
 
   @override
   Future<Either<Failure, String>> rateVisit(
       {required rateRequestModel, required int visitId}) async {
-    try {
-      final result = await _apiConsumer.post(
+    return _apiConsumer.handleRequest(
+      request: () => _apiConsumer.post(
         isFromData: true,
         path: EndPoints.rateVisit(id: visitId),
         data: rateRequestModel.toJson(),
-      );
-      return Right(result['meta']['message']);
-    } on SocketException catch (e) {
-      return Left(ServerFailure(message: e.message));
-    } on DioException catch (e) {
-      return Left(ServerFailure.fromDioError(e));
-    } catch (e) {
-      return Left(ServerFailure(message: e.toString()));
-    }
+      ),
+      onSuccess: (result) => result['meta']['message'] as String,
+    );
   }
 }

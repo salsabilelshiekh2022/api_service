@@ -1,3 +1,6 @@
+import 'package:dartz/dartz.dart';
+import 'package:elmohtaref/core/database/network/failure.dart';
+
 abstract class ApiConsumer {
   Future<dynamic> get(
     String path, {
@@ -14,5 +17,10 @@ abstract class ApiConsumer {
     required String path,
     Object? data,
     Map<String, dynamic>? queryParameters,
+  });
+
+  Future<Either<Failure, T>> handleRequest<T>({
+    required Future<dynamic> Function() request,
+    required T Function(dynamic) onSuccess,
   });
 }

@@ -55,6 +55,7 @@ class _LoginFormState extends State<LoginForm> {
           controller: _controller,
           hintText: context.enterPhoneNumber,
           keyBoardType: TextInputType.phone,
+          maxLength: 9,
           suffixWidget: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 16),
             child: Text(
