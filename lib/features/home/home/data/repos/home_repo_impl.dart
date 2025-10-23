@@ -4,9 +4,11 @@ import 'package:elmohtaref/core/database/network/failure.dart';
 import 'package:elmohtaref/features/home/home/data/models/banner_model.dart';
 import 'package:elmohtaref/features/home/home/data/models/service_model.dart';
 import 'package:elmohtaref/features/home/home/data/models/social_media_response_model.dart';
+import 'package:injectable/injectable.dart';
 import '../../../../../core/database/network/api_consumer.dart';
 import 'home_repo.dart';
 
+@LazySingleton(as: HomeRepo)
 class HomeRepoImpl implements HomeRepo {
   final ApiConsumer apiConsumer;
 

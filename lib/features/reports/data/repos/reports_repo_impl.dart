@@ -2,9 +2,11 @@ import 'package:dartz/dartz.dart';
 import 'package:elmohtaref/core/database/network/failure.dart';
 import 'package:elmohtaref/features/reports/data/models/reports_model.dart';
 import 'package:elmohtaref/features/reports/data/repos/reports_repo.dart';
+import 'package:injectable/injectable.dart';
 import '../../../../core/database/network/api_consumer.dart';
 import '../../../../core/database/network/end_points.dart';
 
+@LazySingleton(as: ReportsRepo)
 class ReportsRepoImpl implements ReportsRepo {
   final ApiConsumer apiConsumer;
 

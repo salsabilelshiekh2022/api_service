@@ -3,10 +3,12 @@ import 'package:elmohtaref/core/database/network/api_consumer.dart';
 import 'package:elmohtaref/core/database/network/failure.dart';
 import 'package:elmohtaref/features/visits/data/models/visit_model.dart';
 import 'package:elmohtaref/features/visits/data/repos/visits_repo.dart';
+import 'package:injectable/injectable.dart';
 
 import '../../../../core/database/network/end_points.dart';
 import '../models/visit_enum_status.dart';
 
+@LazySingleton(as: VisitsRepo)
 class VisitsRepoImpl implements VisitsRepo {
   final ApiConsumer _apiConsumer;
   VisitsRepoImpl(this._apiConsumer);

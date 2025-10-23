@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:injectable/injectable.dart';
 import '../../../../core/database/network/api_consumer.dart';
 import '../../../../core/database/network/end_points.dart';
 import '../../../../core/database/network/failure.dart';
@@ -6,6 +7,7 @@ import '../models/ticket_messages_model.dart';
 import '../models/tickets_model.dart';
 import 'tech_support_repo.dart';
 
+@LazySingleton(as: TechSupportRepo)
 class TechSupportRepoImpl implements TechSupportRepo {
   final ApiConsumer apiConsumer;
 

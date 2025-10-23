@@ -10,18 +10,24 @@ import 'package:elmohtaref/core/utils/app_keys.dart';
 import 'package:elmohtaref/features/auth/data/models/user_model.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
+import 'package:injectable/injectable.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+import 'package:requests_inspector/requests_inspector.dart';
 
 import '../../utils/app_logs.dart';
 import '../cache/cache_helper.dart';
 import '../cache/cache_services.dart';
 import 'api_consumer.dart';
 
+@LazySingleton(as: ApiConsumer)
 class DioConsumer extends ApiConsumer {
-  final Dio dio;
+  final dio = Dio()
+    ..interceptors.add(
+      RequestsInspectorInterceptor(),
+    );
   final CacheServices cacheServices;
 
-  DioConsumer({required this.dio, required this.cacheServices}) {
+  DioConsumer({required this.cacheServices}) {
     dio.options.baseUrl = EndPoints.baseUrl;
 
     if (kDebugMode) {

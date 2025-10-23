@@ -4,9 +4,11 @@ import 'package:elmohtaref/core/database/network/failure.dart';
 import 'package:elmohtaref/features/book_service/data/models/book_service_request_model.dart';
 import 'package:elmohtaref/features/book_service/data/models/car_type_model.dart';
 import 'package:elmohtaref/features/book_service/data/models/time_slots_model.dart';
+import 'package:injectable/injectable.dart';
 import '../../../../core/database/network/end_points.dart';
 import 'book_service_repo.dart';
 
+@LazySingleton(as: BookServiceRepo)
 class BookServiceRepoImpl implements BookServiceRepo {
   final ApiConsumer apiConsumer;
 

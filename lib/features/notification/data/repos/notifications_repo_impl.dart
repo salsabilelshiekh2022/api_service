@@ -1,10 +1,12 @@
 import 'package:dartz/dartz.dart';
+import 'package:injectable/injectable.dart';
 import '../../../../core/database/network/api_consumer.dart';
 import '../../../../core/database/network/end_points.dart';
 import '../../../../core/database/network/failure.dart';
 import '../models/notification_model.dart';
 import 'notifications_repo.dart';
 
+@LazySingleton(as: NotificationRepository)
 class NotificationRepositoryImpl implements NotificationRepository {
   final ApiConsumer _apiConsumer;
 

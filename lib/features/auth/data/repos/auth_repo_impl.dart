@@ -1,11 +1,13 @@
 import 'package:dartz/dartz.dart';
 import 'package:elmohtaref/core/database/network/failure.dart';
 import 'package:elmohtaref/features/auth/data/models/user_model.dart';
+import 'package:injectable/injectable.dart';
 import '../../../../core/database/network/api_consumer.dart';
 import '../../../../core/database/network/end_points.dart';
 import '../models/edit_profile_request_model.dart';
 import 'auth_repo.dart';
 
+@LazySingleton(as: AuthRepo)
 class AuthRepoImpl implements AuthRepo {
   final ApiConsumer apiConsumer;
   AuthRepoImpl({required this.apiConsumer});
