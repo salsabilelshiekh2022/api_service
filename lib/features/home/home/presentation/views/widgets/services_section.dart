@@ -26,7 +26,7 @@ class ServicesSection extends StatelessWidget {
               style: appTextStyles.font18BoldPrimaryColor,
             ),
             16.verticalSpace,
-            ServicesGridView(),
+            const ServicesGridView(),
           ],
         ),
       ),

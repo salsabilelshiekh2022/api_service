@@ -21,7 +21,7 @@ class MainNavigation extends StatefulWidget {
 class _MainNavigationState extends State<MainNavigation> {
   @override
   void initState() {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent, // Status bar background color
       statusBarIconBrightness: Brightness.light, // Light icons
       statusBarBrightness: Brightness.light, // For iOS
@@ -40,7 +40,8 @@ class _MainNavigationState extends State<MainNavigation> {
             getIt<HomeRepo>(),
           )
             ..getHomeBanners()
-            ..getHomeServices()..getSocialMedia(),
+            ..getHomeServices()
+            ..getSocialMedia(),
         ),
       ],
       child: Scaffold(

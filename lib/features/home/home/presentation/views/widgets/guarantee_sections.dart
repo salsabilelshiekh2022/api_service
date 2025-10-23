@@ -22,7 +22,8 @@ class GuaranteeSections extends StatelessWidget {
         return Skeletonizer(
           enabled: state.isSocialMediaLoading,
           child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 16.0),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 30.0, vertical: 16.0),
             width: double.infinity,
             color: Colors.white,
             child: Column(

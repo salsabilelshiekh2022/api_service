@@ -42,7 +42,7 @@ class _SettingItemWidgetState extends State<SettingItemWidget> {
                 widget.settingModel.title,
                 style: appTextStyle.font14RegularPrimaryColor,
               ),
-              Spacer(),
+              const Spacer(),
               widget.settingModel.isWorkingTimes
                   ? Skeletonizer(
                       enabled: isLoading,

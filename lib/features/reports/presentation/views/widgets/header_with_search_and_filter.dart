@@ -21,7 +21,7 @@ class HeaderWithSearchAndFilter extends StatelessWidget {
     final appTextStyles = Theme.of(context).extension<AppTextStyles>()!;
     return Stack(
       children: [
-        ImageHeader(),
+        const ImageHeader(),
         Positioned(
           top: 70.h,
           left: 30.w,

@@ -17,8 +17,4 @@ class ServiceModel {
       {'id': id, 'name': name, 'main_image': mainImage};
 }
 
-ServiceModel dummyService = ServiceModel(
-    id: -1,
-    name: '',
-    mainImage:
-        '');
+ServiceModel dummyService = ServiceModel(id: -1, name: '', mainImage: '');

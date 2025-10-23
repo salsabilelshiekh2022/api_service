@@ -11,9 +11,8 @@ class CarTypesResponse {
 
   factory CarTypesResponse.fromJson(Map<String, dynamic> json) {
     return CarTypesResponse(
-      data: (json['data'] as List)
-          .map((item) => CarType.fromJson(item))
-          .toList(),
+      data:
+          (json['data'] as List).map((item) => CarType.fromJson(item)).toList(),
       success: json['success'] ?? false,
       meta: CarTypesMeta.fromJson(json['meta'] ?? {}),
     );
@@ -64,9 +63,7 @@ class CarType {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is CarType &&
-          runtimeType == other.runtimeType &&
-          id == other.id;
+      other is CarType && runtimeType == other.runtimeType && id == other.id;
 
   @override
   int get hashCode => id.hashCode;

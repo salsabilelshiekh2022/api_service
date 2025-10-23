@@ -19,7 +19,7 @@ class CustomAppBar extends StatelessWidget {
     return Stack(
       children: [
         ClipRRect(
-          borderRadius: BorderRadius.all(Radius.circular(24)),
+          borderRadius: const BorderRadius.all(Radius.circular(24)),
           child: Image.asset(AppAssets.imagesHeadSm,
               width: double.infinity, height: height.h, fit: BoxFit.cover),
         ),

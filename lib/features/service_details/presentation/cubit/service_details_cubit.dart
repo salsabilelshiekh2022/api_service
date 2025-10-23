@@ -9,7 +9,8 @@ part 'service_details_state.dart';
 
 class ServiceDetailsCubit extends Cubit<ServiceDetailsState> {
   ServiceDetailsCubit(this._serviceDetailsRepo)
-      : super(ServiceDetailsState(status: ServiceDetailsStateStatus.initial));
+      : super(const ServiceDetailsState(
+            status: ServiceDetailsStateStatus.initial));
 
   final ServiceDetailsRepo _serviceDetailsRepo;
 

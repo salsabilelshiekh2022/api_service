@@ -17,6 +17,7 @@ enum VisitsStatus {
   rateVisitFailure,
 }
 
+// ignore: must_be_immutable
 class VisitsState extends Equatable {
   final List<Visit> visits;
   final VisitsStatus status;

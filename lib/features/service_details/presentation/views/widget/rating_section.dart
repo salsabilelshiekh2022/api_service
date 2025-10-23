@@ -20,7 +20,7 @@ class RatingSection extends StatelessWidget {
         builder: (context, state) {
           bool isLoading = state.status == ServiceDetailsStateStatus.loading;
           return ListView.separated(
-              padding: EdgeInsets.only(bottom: 80),
+              padding: const EdgeInsets.only(bottom: 80),
               itemBuilder: (context, index) {
                 return Skeletonizer(
                     enabled: isLoading,

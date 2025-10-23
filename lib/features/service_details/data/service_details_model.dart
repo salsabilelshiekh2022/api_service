@@ -201,6 +201,6 @@ ServiceDetailData dummyServiceDetailData = ServiceDetailData(
         rating: 4.0,
         comment: 'Good job!',
         userName: 'Jane Smith',
-        createdAt: DateTime.now().subtract(Duration(days: 1))),
+        createdAt: DateTime.now().subtract(const Duration(days: 1))),
   ],
 );

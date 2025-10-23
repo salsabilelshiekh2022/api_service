@@ -24,7 +24,7 @@ class NotificationsView extends StatelessWidget {
             CustomAppBar(title: context.notification, isBack: true),
             24.verticalSpace,
             UserCacheService().currentUser == null
-                ? ShouldLoginWidget()
+                ? const ShouldLoginWidget()
                 : const Expanded(child: NotificationsList()),
           ],
         ),

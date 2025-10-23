@@ -52,7 +52,7 @@ class _ServiceRatingDialogState extends State<ServiceRatingDialog> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              DialogHeader(),
+              const DialogHeader(),
               DialogContent(
                 selectedRating: selectedRating,
                 onRatingChanged: (rating) {

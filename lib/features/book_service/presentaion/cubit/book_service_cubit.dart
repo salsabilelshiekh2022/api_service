@@ -17,7 +17,7 @@ import '../../data/models/car_type_model.dart';
 part 'book_service_state.dart';
 
 class BookServiceCubit extends Cubit<BookServiceState> {
-  BookServiceCubit(this._bookServiceRepo) : super(BookServiceState());
+  BookServiceCubit(this._bookServiceRepo) : super(const BookServiceState());
   final BookServiceRepo _bookServiceRepo;
 
   // Form controllers

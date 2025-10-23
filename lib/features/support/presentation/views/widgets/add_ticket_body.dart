@@ -84,6 +84,7 @@ class _AddTicketBodyState extends State<AddTicketBody> {
                           .read<TechSupportCubit>()
                           .createNewTicket(title: controller.text.trim())
                           .then((val) {
+                        // ignore: use_build_context_synchronously
                         context.read<TechSupportCubit>().getTicketsList();
                       }, onError: (error, stackTrace) {});
                     }

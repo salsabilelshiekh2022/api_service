@@ -84,7 +84,6 @@ class Meta {
     this.currentPage,
     this.from,
     this.lastPage,
-
     this.path,
     this.perPage,
     this.to,

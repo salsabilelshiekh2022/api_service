@@ -38,7 +38,7 @@ class CustomLoadingDialog extends StatelessWidget {
           color: Colors.transparent,
           borderRadius: BorderRadius.circular(10),
         ),
-        child: Center(
+        child: const Center(
           child: CircularProgressIndicator(),
         ),
       ),

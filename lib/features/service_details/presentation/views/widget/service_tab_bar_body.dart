@@ -15,7 +15,7 @@ class ServiceTabBarBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TabBarView(
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       controller: _tabController,
       children: const <Widget>[
         InfoSection(),

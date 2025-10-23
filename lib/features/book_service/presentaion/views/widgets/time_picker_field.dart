@@ -73,7 +73,7 @@ class _TimePickerFieldState extends State<TimePickerField> {
               ),
               overflow: TextOverflow.ellipsis,
             ),
-            Icon(
+            const Icon(
               Icons.calendar_today_outlined,
               color: Colors.grey,
               size: 14,

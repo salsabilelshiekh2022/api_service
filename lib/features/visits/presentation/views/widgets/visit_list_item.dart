@@ -40,7 +40,8 @@ class VisitListItem extends StatelessWidget {
           left: 12.w,
           right: 12.w,
         ),
-        padding: EdgeInsetsDirectional.only(top: 10, bottom: 10, start: 10),
+        padding:
+            const EdgeInsetsDirectional.only(top: 10, bottom: 10, start: 10),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(12.r),
@@ -69,15 +70,16 @@ class VisitListItem extends StatelessWidget {
                             )),
                       ),
                       Container(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 6, vertical: 3),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 6, vertical: 3),
                         decoration: BoxDecoration(
                             color: visit.statusToCheck == "pending"
-                                ? Color(0xfff7f0e0)
+                                ? const Color(0xfff7f0e0)
                                 : visit.statusToCheck == "completed"
-                                    ? Color(0xffd9f7e9)
-                                    : Color(0xffffd9d9),
-                            borderRadius: BorderRadiusDirectional.horizontal(
+                                    ? const Color(0xffd9f7e9)
+                                    : const Color(0xffffd9d9),
+                            borderRadius:
+                                const BorderRadiusDirectional.horizontal(
                               start: Radius.circular(25),
                             )),
                         child: Center(child: Text(visit.status)),
@@ -102,7 +104,7 @@ class VisitListItem extends StatelessWidget {
                                 color: Colors.grey,
                                 borderRadius: BorderRadius.circular(6.r),
                               ),
-                              padding: EdgeInsets.symmetric(
+                              padding: const EdgeInsets.symmetric(
                                   horizontal: 6, vertical: 3),
                               child: Row(
                                 children: [
@@ -122,7 +124,7 @@ class VisitListItem extends StatelessWidget {
                                 ],
                               ),
                             )
-                          : SizedBox(),
+                          : const SizedBox(),
                     ],
                   ),
                 ],

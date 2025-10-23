@@ -34,7 +34,7 @@ class ProblemSection extends StatelessWidget {
             child: TextFormField(
               controller: context.read<BookServiceCubit>().notesController,
               textAlign: TextAlign.right,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 14,
               ),
               textInputAction: TextInputAction.done,
@@ -42,7 +42,7 @@ class ProblemSection extends StatelessWidget {
                 hintText: context.enterNotes,
                 hintStyle: appTextStyles.font14RegularSecondaryColor,
                 border: InputBorder.none,
-                contentPadding: EdgeInsets.all(14),
+                contentPadding: const EdgeInsets.all(14),
               ),
             ),
           )

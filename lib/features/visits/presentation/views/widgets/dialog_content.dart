@@ -23,7 +23,7 @@ class DialogContent extends StatelessWidget {
     final AppTextStyles appTextStyle =
         Theme.of(context).extension<AppTextStyles>()!;
     return Padding(
-      padding: EdgeInsets.all(24),
+      padding: const EdgeInsets.all(24),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

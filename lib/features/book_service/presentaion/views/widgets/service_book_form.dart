@@ -35,18 +35,18 @@ class _ServiceBookFormState extends State<ServiceBookForm> {
         child: Column(
           children: [
             UserCacheService().currentUser == null
-                ? ProfileSection()
-                : SizedBox(),
+                ? const ProfileSection()
+                : const SizedBox(),
             UserCacheService().currentUser == null
                 ? 8.verticalSpace
-                : SizedBox(),
-            ServiceDetailsSection(),
+                : const SizedBox(),
+            const ServiceDetailsSection(),
             8.verticalSpace,
-            SelectDateSection(),
+            const SelectDateSection(),
             8.verticalSpace,
-            ProblemSection(),
+            const ProblemSection(),
             8.verticalSpace,
-            PhotoSection(),
+            const PhotoSection(),
             80.verticalSpace,
           ],
         ),

@@ -13,6 +13,7 @@ enum ReportsStatus {
   searching
 }
 
+// ignore: must_be_immutable
 class ReportsState extends Equatable {
   final List<Report> reports;
   final ReportsStatus status;

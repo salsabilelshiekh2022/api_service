@@ -58,7 +58,7 @@ class _ReportsViewState extends State<ReportsView> {
             ),
             16.verticalSizedBox,
             UserCacheService().currentUser == null
-                ? ShouldLoginWidget()
+                ? const ShouldLoginWidget()
                 : Expanded(child: ReportsList(search: _searchValue)),
           ],
         ),

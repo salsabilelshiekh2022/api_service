@@ -70,7 +70,7 @@ class DatePickerField extends StatelessWidget {
               ),
               overflow: TextOverflow.ellipsis,
             ),
-            Icon(
+            const Icon(
               Icons.calendar_today_outlined,
               color: Colors.grey,
               size: 14,

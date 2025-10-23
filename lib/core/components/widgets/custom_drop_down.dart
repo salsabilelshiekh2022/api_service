@@ -37,7 +37,7 @@ class CustomDropdown extends StatelessWidget {
       child: Container(
         width: double.infinity,
         constraints: const BoxConstraints(maxHeight: 44),
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           horizontal: 12,
           vertical: 8,
         ),
@@ -58,7 +58,7 @@ class CustomDropdown extends StatelessWidget {
               ),
               overflow: TextOverflow.ellipsis,
             ),
-            Icon(
+            const Icon(
               Icons.keyboard_arrow_down,
               color: Colors.grey,
               size: 14,

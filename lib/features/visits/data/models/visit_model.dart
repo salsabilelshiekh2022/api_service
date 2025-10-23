@@ -1,4 +1,3 @@
-
 class VisitsResponse {
   final List<Visit> data;
   final Links links;
@@ -14,9 +13,7 @@ class VisitsResponse {
 
   factory VisitsResponse.fromJson(Map<String, dynamic> json) {
     return VisitsResponse(
-      data: (json['data'] as List)
-          .map((item) => Visit.fromJson(item))
-          .toList(),
+      data: (json['data'] as List).map((item) => Visit.fromJson(item)).toList(),
       links: Links.fromJson(json['links']),
       meta: Meta.fromJson(json['meta']),
       success: json['success'] ?? false,
@@ -47,19 +44,18 @@ class Visit {
   final String statusToCheck;
   final String carModelYear;
 
-  Visit({
-    required this.id,
-    required this.uid,
-    required this.user,
-    required this.carType,
-    required this.carModel,
-    required this.dateTime,
-    required this.notes,
-    required this.status,
-    required this.statusToCheck,
-    required this.service,
-    required this.carModelYear
-  });
+  Visit(
+      {required this.id,
+      required this.uid,
+      required this.user,
+      required this.carType,
+      required this.carModel,
+      required this.dateTime,
+      required this.notes,
+      required this.status,
+      required this.statusToCheck,
+      required this.service,
+      required this.carModelYear});
 
   factory Visit.fromJson(Map<String, dynamic> json) {
     return Visit(
@@ -76,7 +72,6 @@ class Visit {
       carModelYear: json['car_model_year'] ?? '',
     );
   }
-
 
   Map<String, dynamic> toJson() {
     return {
@@ -212,5 +207,15 @@ class MetaLink {
   }
 }
 
-
-  Visit  dummyVisit =Visit(id: -1, uid: '', user: '', carType: '', carModel: '', dateTime: "2025-06-20 19:40:00", notes: '', status: '', statusToCheck: '', service: '', carModelYear: ''); // dummyVisit 
+Visit dummyVisit = Visit(
+    id: -1,
+    uid: '',
+    user: '',
+    carType: '',
+    carModel: '',
+    dateTime: "2025-06-20 19:40:00",
+    notes: '',
+    status: '',
+    statusToCheck: '',
+    service: '',
+    carModelYear: ''); // dummyVisit

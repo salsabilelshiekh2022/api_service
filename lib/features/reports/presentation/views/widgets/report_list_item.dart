@@ -25,7 +25,7 @@ class ReportListItem extends StatelessWidget {
     final AppTextStyles appTextStyles =
         Theme.of(context).extension<AppTextStyles>()!;
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       margin: EdgeInsets.symmetric(
         horizontal: 10.w,
       ),

@@ -76,7 +76,7 @@ class _EditProfileViewState extends State<EditProfileView> {
                                       )
                                     : _selectedImage != null
                                         ? FileImage(_selectedImage!)
-                                        : AssetImage(AppAssets.imagesLogo)
+                                        : const AssetImage(AppAssets.imagesLogo)
                                             as ImageProvider,
                               ),
                             ),
@@ -97,7 +97,7 @@ class _EditProfileViewState extends State<EditProfileView> {
                                       width: 2,
                                     ),
                                   ),
-                                  child: Icon(
+                                  child: const Icon(
                                     Icons.edit,
                                     color: Colors.white,
                                     size: 20,
@@ -127,11 +127,11 @@ class _EditProfileViewState extends State<EditProfileView> {
     showModalBottomSheet(
       context: context,
       backgroundColor: Colors.white,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),
       builder: (context) => Container(
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -183,7 +183,7 @@ class _EditProfileViewState extends State<EditProfileView> {
       onTap: onTap,
       child: Container(
         width: 120,
-        padding: EdgeInsets.symmetric(vertical: 20),
+        padding: const EdgeInsets.symmetric(vertical: 20),
         decoration: BoxDecoration(
           color: Colors.grey[100],
           borderRadius: BorderRadius.circular(12),
@@ -225,7 +225,7 @@ class _EditProfileViewState extends State<EditProfileView> {
       }
     } catch (e) {
       AppSnackBar.showSnackBar(
-        context: context,
+        context: mounted ? context : context,
         message: 'Error selecting image: $e',
         state: SnackBarStates.error,
       );

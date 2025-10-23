@@ -21,7 +21,7 @@ class SearchField extends StatelessWidget {
         cursorColor: appColors.primaryColor,
         style: appTextStyles.font16RegularPrimaryColor,
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.all(0),
+          contentPadding: const EdgeInsets.all(0),
           fillColor: Colors.white,
           filled: true,
           border: OutlineInputBorder(

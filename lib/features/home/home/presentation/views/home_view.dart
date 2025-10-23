@@ -21,18 +21,18 @@ class HomeView extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    HomeAppBar(),
+                    const HomeAppBar(),
                     110.verticalSpace,
                   ],
                 ),
-                HomeBanners(),
+                const HomeBanners(),
               ],
             ),
           ),
           8.verticalSpace,
-          ServicesSection(),
+          const ServicesSection(),
           8.verticalSpace,
-          GuaranteeSections(),
+          const GuaranteeSections(),
         ],
       ),
     );

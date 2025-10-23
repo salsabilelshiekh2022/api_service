@@ -52,7 +52,7 @@ class TimeSlot extends Equatable {
       '${dateTime.month.toString().padLeft(2, '0')}/'
       '${dateTime.year}';
 
-  String get formattedDateTime => '${formattedDate} ${time}';
+  String get formattedDateTime => '$formattedDate $time';
 
   @override
   String toString() {

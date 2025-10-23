@@ -21,7 +21,7 @@ class StarRatingWidget extends StatelessWidget {
             onRatingChanged(index + 1);
           },
           child: Padding(
-            padding: EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
               vertical: 4,
             ),
             child: Icon(

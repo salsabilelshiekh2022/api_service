@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../../../../core/utils/app_logs.dart';
 import '../../../data/models/banner_model.dart';
 
 class BannerItem extends StatelessWidget {
@@ -18,7 +19,9 @@ class BannerItem extends StatelessWidget {
       onTap: () {
         try {
           launchUrl(Uri.parse(banner.action ?? ''));
-        } catch (e) {}
+        } catch (e) {
+          AppLogs.errorLog(e.toString());
+        }
       },
       child: SizedBox(
         width: double.infinity,

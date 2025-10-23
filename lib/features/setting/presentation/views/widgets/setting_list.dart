@@ -10,7 +10,7 @@ class SettingList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-      padding: EdgeInsets.symmetric(vertical: 30),
+      padding: const EdgeInsets.symmetric(vertical: 30),
       shrinkWrap: true,
       itemCount: settingItems(context).length,
       physics: const NeverScrollableScrollPhysics(),

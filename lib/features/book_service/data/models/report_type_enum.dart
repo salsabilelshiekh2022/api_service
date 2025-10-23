@@ -2,6 +2,7 @@ import 'package:elmohtaref/core/extensions/translation_extensions.dart';
 import 'package:flutter/material.dart';
 
 enum ReportTypeEnum {
+  // ignore: constant_identifier_names
   buy_and_sell,
   ettamen,
 }

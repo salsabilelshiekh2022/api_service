@@ -38,7 +38,7 @@ class _FilterDialogState extends State<FilterDialog> {
         constraints: BoxConstraints(
           maxHeight: context.height * 0.9,
         ),
-        margin: EdgeInsets.symmetric(
+        margin: const EdgeInsets.symmetric(
           vertical: 0,
         ),
         decoration: BoxDecoration(

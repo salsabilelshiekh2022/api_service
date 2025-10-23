@@ -30,21 +30,21 @@ class _ServiceDetailsViewState extends State<ServiceDetailsView>
           title: Tab(
             child: Text(context.info),
           ),
-          content: InfoSection(),
+          content: const InfoSection(),
         ),
         TabData(
           index: 2,
           title: Tab(
             child: Text(context.photos),
           ),
-          content: PhotosSection(),
+          content: const PhotosSection(),
         ),
         TabData(
           index: 3,
           title: Tab(
             child: Text(context.rate),
           ),
-          content: RatingSection(),
+          content: const RatingSection(),
         ),
       ];
 
@@ -70,8 +70,8 @@ class _ServiceDetailsViewState extends State<ServiceDetailsView>
       ),
       body: Column(
         children: [
-          ServiceDetailsHeader(),
-          ServiceInfo(),
+          const ServiceDetailsHeader(),
+          const ServiceInfo(),
           Expanded(
             child: DynamicTabBarWidget(
               dynamicTabs: tabs(context: context),

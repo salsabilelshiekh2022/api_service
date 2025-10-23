@@ -10,7 +10,7 @@ void main() async {
   await ServicesInit.init();
   runApp(Phoenix(
     child: EasyLocalization(
-      supportedLocales: [Locale('en'), Locale('ar')],
+      supportedLocales: [const Locale('en'), const Locale('ar')],
       path: 'assets/translations',
       fallbackLocale: const Locale(
         'ar',
@@ -18,7 +18,7 @@ void main() async {
       startLocale: const Locale(
         'ar',
       ),
-      child: ElmohtarefApp(),
+      child: const ElmohtarefApp(),
     ),
   ));
 }

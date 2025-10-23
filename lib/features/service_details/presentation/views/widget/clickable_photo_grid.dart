@@ -136,7 +136,7 @@ class _PhotoViewerScreenState extends State<PhotoViewerScreen> {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    Colors.black.withOpacity(0.7),
+                    Colors.black.withValues(alpha: 0.7),
                     Colors.transparent,
                   ],
                 ),
@@ -188,7 +188,7 @@ class _PhotoViewerScreenState extends State<PhotoViewerScreen> {
                     begin: Alignment.bottomCenter,
                     end: Alignment.topCenter,
                     colors: [
-                      Colors.black.withOpacity(0.7),
+                      Colors.black.withValues(alpha: 0.7),
                       Colors.transparent,
                     ],
                   ),
@@ -204,7 +204,7 @@ class _PhotoViewerScreenState extends State<PhotoViewerScreen> {
                       decoration: BoxDecoration(
                         color: _currentIndex == index
                             ? Colors.white
-                            : Colors.white.withOpacity(0.4),
+                            : Colors.white.withValues(alpha: 0.4),
                         borderRadius: BorderRadius.circular(4),
                       ),
                     ),
@@ -457,7 +457,7 @@ class ClickablePhotoGrid extends StatelessWidget {
                                 ),
                                 if (photos.length > 3)
                                   Container(
-                                    color: Colors.black.withOpacity(0.6),
+                                    color: Colors.black.withValues(alpha: 0.5),
                                     child: Center(
                                       child: Text(
                                         '+${photos.length - 3}',

@@ -43,7 +43,7 @@ class SettingView extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        ImageHeader(),
+                        const ImageHeader(),
                         SizedBox(height: 500.h),
                       ],
                     ),
@@ -61,11 +61,11 @@ class SettingView extends StatelessWidget {
                         ),
                         child: Column(
                           children: [
-                            PersonalCard(),
+                            const PersonalCard(),
                             // 12.verticalSpace,
-                            SettingList(),
+                            const SettingList(),
                             12.verticalSpace,
-                            SocialMediaContent(),
+                            const SocialMediaContent(),
                           ],
                         ),
                       ),

@@ -77,7 +77,7 @@ class _PersonalCardState extends State<PersonalCard> {
                 onTap: () => context.pushNamed(Routes.editProfileView),
                 child: Icon(Icons.edit_rounded,
                     color: Theme.of(context).primaryColor))
-            : SizedBox(),
+            : const SizedBox(),
         16.horizontalSpace
       ],
     );

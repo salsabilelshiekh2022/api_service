@@ -31,7 +31,7 @@ class _BookServiceViewState extends State<BookServiceView> {
         return CustomModelProgressIndecator(
           inAsyncCall: state.isLoading,
           child: Scaffold(
-            bottomSheet: ComfirmBookServiceButton(),
+            bottomSheet: const ComfirmBookServiceButton(),
             body: GestureDetector(
               onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
               child: SingleChildScrollView(

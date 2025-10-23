@@ -23,7 +23,6 @@ class AppColors extends ThemeExtension<AppColors> {
 
   @override
   ThemeExtension<AppColors> copyWith() {
-    // TODO: implement copyWith
     throw UnimplementedError();
   }
 

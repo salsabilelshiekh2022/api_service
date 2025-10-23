@@ -56,7 +56,7 @@ class _VisitsViewState extends State<VisitsView> {
             ),
             16.verticalSizedBox,
             UserCacheService().currentUser == null
-                ? ShouldLoginWidget()
+                ? const ShouldLoginWidget()
                 : Expanded(child: VisitsList(search: _searchValue)),
           ],
         ),

@@ -10,7 +10,8 @@ import '../../data/repos/home_repo.dart';
 part 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
-  HomeCubit(this._homeRepo) : super(HomeState(status: HomeStatus.initial));
+  HomeCubit(this._homeRepo)
+      : super(const HomeState(status: HomeStatus.initial));
   final HomeRepo _homeRepo;
 
   Future<void> getHomeBanners() async {

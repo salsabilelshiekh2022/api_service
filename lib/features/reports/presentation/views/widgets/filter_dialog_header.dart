@@ -11,7 +11,7 @@ class FilterDialogHeader extends StatelessWidget {
     final AppTextStyles appTextStyles =
         Theme.of(context).extension<AppTextStyles>()!;
     return Container(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       decoration: const BoxDecoration(
         border: Border(
           bottom: BorderSide(color: Color(0xFFE5E5E5), width: 1),
@@ -24,7 +24,7 @@ class FilterDialogHeader extends StatelessWidget {
             onTap: () {},
             child: Text(
               context.reset,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 14,
                 color: Colors.blue,
                 fontWeight: FontWeight.w500,

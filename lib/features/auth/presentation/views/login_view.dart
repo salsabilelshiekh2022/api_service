@@ -23,14 +23,14 @@ class LoginView extends StatelessWidget {
             inAsyncCall: state is SendOtpLoadingState,
             child: SingleChildScrollView(
                 child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
               child: Column(
                 children: [
                   WelcomeWidget(
                     text: context.loginOrRegister,
                     decription: context.loginToAccessData,
                   ),
-                  LoginForm(),
+                  const LoginForm(),
                 ],
               ),
             )),

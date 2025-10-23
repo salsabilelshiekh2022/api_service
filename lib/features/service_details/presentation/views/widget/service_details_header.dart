@@ -45,7 +45,7 @@ class ServiceDetailsHeader extends StatelessWidget {
                     ),
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 // InkWell(
                 //   onTap: () {},
                 //   child: Container(

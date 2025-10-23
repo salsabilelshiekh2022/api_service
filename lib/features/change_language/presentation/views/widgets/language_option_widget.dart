@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:easy_localization/easy_localization.dart';
 import 'package:elmohtaref/core/extensions/app_extention.dart';
 import 'package:elmohtaref/core/theme/app_colors.dart';
@@ -26,8 +28,10 @@ class LanguageOption extends StatelessWidget {
   Future<void> _changeLanguage(BuildContext context) async {
     AppLogs.errorLog("Language changed to $languageEnum");
     await EasyLocalization.of(context)?.setLocale(locale);
-    context.pushNamedAndRemoveUntil(Routes.mainNavigation,
-        predicate: (route) => false);
+    if (context.mounted) {
+      context.pushNamedAndRemoveUntil(Routes.mainNavigation,
+          predicate: (route) => false);
+    }
   }
 
   @override

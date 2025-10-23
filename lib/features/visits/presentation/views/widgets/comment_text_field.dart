@@ -26,7 +26,7 @@ class CommentTextField extends StatelessWidget {
       child: TextFormField(
         controller: controller,
         textAlign: TextAlign.right,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 14,
         ),
         onEditingComplete: () {
@@ -41,7 +41,7 @@ class CommentTextField extends StatelessWidget {
           hintText: hint,
           hintStyle: appTextStyles.font14RegularSecondaryColor,
           border: InputBorder.none,
-          contentPadding: EdgeInsets.all(14),
+          contentPadding: const EdgeInsets.all(14),
         ),
       ),
     );
